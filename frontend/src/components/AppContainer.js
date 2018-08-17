@@ -3,7 +3,7 @@ import LogoContainer from './LogoContainer'
 import NavBar from './NavBar'
 import MoodBar from './MoodBar'
 import GenreSelector from './GenreSelector'
-import Playlist from './Playlist'
+import PlayList from './PlayList'
 import PlayerConsole from './PlayerConsole'
 
 class AppContainer extends React.Component {
@@ -25,7 +25,7 @@ class AppContainer extends React.Component {
         </div>
         <div className="plalist-container">
           <h3>This is playlistr will Toone your mood...</h3>
-          <Playlist />
+          <PlayList />
         </div>
         <div className="player-console">
           <PlayerConsole />
