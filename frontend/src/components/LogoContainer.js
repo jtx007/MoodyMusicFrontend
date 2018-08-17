@@ -5,14 +5,15 @@ import LoginForm from './LoginForm'
 class Logo extends React.Component {
   render () {
     return (
-      <header className="App-header">
-        <img src={LogoImg} className="App-logo" alt="logo" />
-        <div className='Title-div'>
-          <h1 className="App-title">Moody Music</h1>
-          <h3 className="App-subtitle">Tuneing your mood!!!</h3>
-        </div>
-        <LoginForm />
-      </header>
+      <nav className="navbar navbar-dark #f3e5f5 purple lighten-5">
+        <a className="navbar-brand">
+          <img src={LogoImg} className="App-logo" height="10" alt="logo" />
+          <div className="title-div">
+            <h1>Moodiy Music</h1>
+            <h5>Tuneing your mood...</h5>
+          </div>
+        </a>
+      </nav>
     )
   }
 }

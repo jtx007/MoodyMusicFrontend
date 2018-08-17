@@ -5,7 +5,6 @@ class MoodBar extends Component {
   render() {
     return (
       <div className="MoodBar">
-        I am the Mood Bar Please select one mood:
         <Mood />
       </div>
     )

@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 
+const moods = ['Happy', 'Exuberant', 'Energetic', 'Down', 'Calm', 'Focus']
+
 class Mood extends Component {
   render() {
     return (
       <div className="Mood">
-        What's Your Moody tune for today?
+        {moods.map(mood =>
+          <button type="button" className="btn btn-outline-secondary waves-effect" key={mood}>{mood}</button>
+        )}
       </div>
     )
   }
