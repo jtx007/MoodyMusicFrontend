@@ -5,6 +5,8 @@
   animation: App-logo-spin infinite 20s linear;
   height: 400px;
   padding: 100px;
+  float: left;
+
 }
 
 .App-header {
@@ -13,7 +15,11 @@
 }
 
 .App-title {
-  padding: 20px
+  left: 0;
+  position:absolute;
+  text-align:center;
+  top: 30px;
+  width: 100%
 }
 
 .App-subtitle {
@@ -27,4 +33,9 @@
 
 .title-div {
   font-family: 'Syncopate', sans-serif;
+  left: 0;
+  position:absolute;
+  text-align:center;
+  top: 200px;
+  width: 100%
 }

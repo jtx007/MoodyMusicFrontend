@@ -20,11 +20,9 @@ class AppContainer extends React.Component {
           <MoodBar />
         </div>
         <div className="genre-selector">
-          <h3>Please select one or more genres of your choice</h3>
           <GenreSelector />
         </div>
         <div className="plalist-container">
-          <h3>This is playlistr will Toone your mood...</h3>
           <PlayList />
         </div>
         <div className="player-console">

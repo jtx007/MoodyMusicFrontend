@@ -7,11 +7,11 @@ class Logo extends React.Component {
     return (
       <nav className="navbar navbar-dark #f3e5f5 purple lighten-5">
         <a className="navbar-brand">
-          <img src={LogoImg} className="App-logo" height="10" alt="logo" />
           <div className="title-div">
             <h1>Moodiy Music</h1>
             <h5>Tuneing your mood...</h5>
           </div>
+          <img src={LogoImg} className="App-logo" alt="logo" />
         </a>
       </nav>
     )

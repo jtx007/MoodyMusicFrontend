@@ -5,7 +5,7 @@ class Playlist extends Component {
   render() {
     return (
       <div className="Playlist">
-        I am a Playlist with these songs:
+        <h3>This Playlist will tune your mood...</h3>
         <Song />
         <Song />
         <Song />
