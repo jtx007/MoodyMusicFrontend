@@ -3,27 +3,9 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 400px;
-  padding: 100px;
+  height: 100px;
+  padding: 10px;
   float: left;
-
-}
-
-.App-header {
-  height: auto;
-  padding: 20px;
-}
-
-.App-title {
-  left: 0;
-  position:absolute;
-  text-align:center;
-  top: 30px;
-  width: 100%
-}
-
-.App-subtitle {
-  font-size: 150%;
 }
 
 @keyframes App-logo-spin {
@@ -33,9 +15,10 @@
 
 .title-div {
   font-family: 'Syncopate', sans-serif;
-  left: 0;
-  position:absolute;
-  text-align:center;
   top: 200px;
-  width: 100%
+  width: '100%';
+  }
+
+.genres-btn {
+  
 }

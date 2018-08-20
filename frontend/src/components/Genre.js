@@ -3,22 +3,41 @@ import GenresTypes from './GenresTypes'
 import GenresTypesBasic from './GenresTypesBasic'
 
 class Genre extends Component {
+  state = {
+    showExtendedGenres: false
+  }
+  handleClick = e => {
+    this.setState(prevState => {
+      return {showExtendedGenres: !prevState.showExtendedGenres}
+    });;
+  }
+
+  displayExtendedGenres = () => {
+    if (this.state.showExtendedGenres) {
+      return(
+        <div className="extended-genres">
+          {GenresTypes.map(genre =>
+            <ul onClick={this.handleClick} className="btn btn-outline-secondary rounded waves-effect" key={genre}>{genre}</ul>
+          )}
+        </div>
+    )}
+  }
+
   render() {
     return (
-      <div className="Genre">
-        <h3>Please select one or more genres of your choice</h3>
-        <p>Basic Genres</p>
-        <div>
-          {GenresTypesBasic.map(genre =>
-            <ul className="btn btn-rounded rounded btn-mdb-color" key={genre}>{genre}</ul>
-          )}
+      <div>
+        <div className="Genre">
+          <h3>Create playlist by Genre</h3>
+          <div>
+            <div>
+              <button url="#" onClick={this.handleClick} className="genres-btn btn btn-rounded btn-mdb-color btn-lg">Extended Genres</button>
+            </div>
+            {GenresTypesBasic.map(genre =>
+              <ul onClick={this.handleClick} className="btn btn-outline-secondary rounded waves-effect" key={genre}>{genre}</ul>
+            )}
+          </div>
         </div>
-        <p>Extended Genres</p>
-        <div>
-          {GenresTypes.map(genre =>
-            <ul className="btn btn-rounded rounded btn-mdb-color" key={genre}>{genre}</ul>
-          )}
-        </div>
+        {this.displayExtendedGenres()}
       </div>
     )
   }

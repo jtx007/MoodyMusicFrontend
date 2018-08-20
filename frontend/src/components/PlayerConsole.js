@@ -8,20 +8,25 @@ class PlayerConsole extends Component {
     // size may also be a plain string using the presets 'large' or 'compact'
     const size = {
       width: '100%',
-      height: 300,
+      height: 450,
     };
     const view = 'coverart'; // or 'coverart'
     const theme = 'black'; // or 'white'
 
     return (
-      <div className="PlayerConsole border border-secondary rounded">
+      <div>
+        <div className="console-title">
+          <h3>This Playlist will tune your mood...</h3>
+        </div>
+        <div className="PlayerConsole border border-secondary rounded">
+          <SpotifyPlayer
 
-        <SpotifyPlayer
-          uri="spotify:album:1TIUsv8qmYLpBEhvmBmyBk"
-          size={size}
-          view={view}
-          theme={theme}
-          />
+            uri="spotify:user:spotify:playlist:37i9dQZF1DX2pprEpa9URZ"
+            size={size}
+            view={view}
+            theme={theme}
+            />
+        </div>
       </div>
     )
   }

@@ -2,8 +2,7 @@ import React from 'react'
 import LogoContainer from './LogoContainer'
 import NavBar from './NavBar'
 import MoodBar from './MoodBar'
-import GenreSelector from './GenreSelector'
-import PlayList from './PlayList'
+import GenreBar from './GenreBar'
 import PlayerConsole from './PlayerConsole'
 
 class AppContainer extends React.Component {
@@ -20,10 +19,7 @@ class AppContainer extends React.Component {
           <MoodBar />
         </div>
         <div className="genre-selector">
-          <GenreSelector />
-        </div>
-        <div className="plalist-container">
-          <PlayList />
+          <GenreBar />
         </div>
         <div className="player-console">
           <PlayerConsole />

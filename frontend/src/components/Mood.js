@@ -6,7 +6,7 @@ class Mood extends Component {
     return (
       <div className="Mood">
         {MoodTypes.map(mood =>
-          <button type="button" className="btn btn-outline-secondary rounded waves-effect" key={mood}>{mood}</button>
+          <button className="btn btn-outline-secondary rounded waves-effect" key={mood}>{mood}</button>
         )}
       </div>
     )

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Genre from './Genre'
 
-class GenreSelector extends Component {
+class GenreBar extends Component {
   render() {
     return (
       <div>
@@ -11,4 +11,4 @@ class GenreSelector extends Component {
   }
 }
 
-export default GenreSelector;
+export default GenreBar;
