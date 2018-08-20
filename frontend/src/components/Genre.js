@@ -27,7 +27,7 @@ class Genre extends Component {
     return (
       <div>
         <div className="Genre">
-          <h3>Create playlist by Genre</h3>
+          <h3 className="app-text">Create playlist by Genre</h3>
           <div>
             <div>
               <button url="#" onClick={this.handleClick} className="genres-btn btn btn-rounded btn-mdb-color btn-lg">Extended Genres</button>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Barrio|Syncopate');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Barrio|Julius+Sans+One|Syncopate');
 
 
 .App-logo {
@@ -17,8 +17,26 @@
   font-family: 'Syncopate', sans-serif;
   top: 200px;
   width: '100%';
-  }
+  margin-left: 20px;
+}
 
-.genres-btn {
-  
+.sub-title {
+  float: right;
+}
+
+.app-text {
+  margin-left: 20px;
+  margin-top: 20px;
+  font-family: 'Julius Sans One', sans-serif;
+}
+.Mood-bar {
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.genre-bar {
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
 }

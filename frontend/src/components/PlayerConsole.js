@@ -16,12 +16,12 @@ class PlayerConsole extends Component {
     return (
       <div>
         <div className="console-title">
-          <h3>This Playlist will tune your mood...</h3>
+          <h3 className="app-text">This Playlist will tune your mood...</h3>
         </div>
         <div className="PlayerConsole border border-secondary rounded">
           <SpotifyPlayer
 
-            uri="spotify:user:spotify:playlist:37i9dQZF1DX2pprEpa9URZ"
+            uri="spotify:user:spotify:playlist:4WCmHOBqKS7pac4s1lW2ZY"
             size={size}
             view={view}
             theme={theme}
