@@ -26,7 +26,7 @@
 
 .app-text {
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 60px;
   font-family: 'Julius Sans One', sans-serif;
 }
 .Mood-bar {
@@ -39,4 +39,35 @@
   margin-top: 40px;
   margin-left: 40px;
   margin-right: 40px;
+}
+
+#modalSignupForm {
+  margin-top: 150px;
+}
+
+.signup-btn {
+  float: right;
+}
+
+.home-btn {
+  float: left;
+}
+
+#modalLoginForm {
+  margin-top: 150px;
+  border-color: purple;
+}
+
+.login-btn {
+  float: right;
+}
+
+.modal-body {
+  margin-top: 50px;
+}
+
+.player-console {
+  padding-left: 200px;
+  padding-right: 200px;
+  border-radius: 5px
 }

@@ -11,14 +11,14 @@ class PlayerConsole extends Component {
       height: 450,
     };
     const view = 'coverart'; // or 'coverart'
-    const theme = 'black'; // or 'white'
+    const theme = 'white'; // or 'white'
 
     return (
       <div>
         <div className="console-title">
           <h3 className="app-text">This Playlist will tune your mood...</h3>
         </div>
-        <div className="PlayerConsole border border-secondary rounded">
+        <div className="PlayerConsole">
           <SpotifyPlayer
 
             uri="spotify:user:spotify:playlist:4WCmHOBqKS7pac4s1lW2ZY"

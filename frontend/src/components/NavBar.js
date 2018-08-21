@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import LoginForm from './LoginForm'
+import SignupForm from './SignupForm'
 
 
 class NavBar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-dark #f3e5f5 purple lighten-5">
-        <a href="" className="btn btn-default btn-rounded #5e35b1 deep-purple darken-1" data-target="">Home</a>
+      <div>
+        <div className="btn home-btn btn-default btn-rounded deep-purple darken-1" data-target="">Home</div>
         <LoginForm />
-      </nav>
+        <SignupForm />
+      </div>
     )
   }
 }
