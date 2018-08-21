@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import LoginForm from './LoginForm'
 import SignupForm from './SignupForm'
 
 
@@ -8,8 +7,7 @@ class NavBar extends Component {
     return (
       <div>
         <div className="btn home-btn btn-default btn-rounded deep-purple darken-1" data-target="">Home</div>
-        <LoginForm />
-        <SignupForm />
+        <SignupForm loggedInStatus={this.props.loggedIn} user={this.props.user} showModal={this.props.modalShow}  modal={this.props.modal} username={this.props.username} logout={this.props.logout} signup={this.props.signup}/>
       </div>
     )
   }
