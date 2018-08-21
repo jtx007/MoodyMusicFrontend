@@ -8,7 +8,7 @@ import PlayerConsole from './PlayerConsole'
 class AppContainer extends React.Component {
 
   state = {
-    current_playlist: ''
+    current_playlist: '37i9dQZF1DXcBWIGoYBM5M'
   }
 
   handleButton = (event) => {

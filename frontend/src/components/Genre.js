@@ -17,7 +17,7 @@ class Genre extends Component {
       return(
         <div className="extended-genres">
           {GenresTypes.map(genre =>
-            <ul onClick={this.handleClick} className="btn btn-outline-secondary rounded waves-effect" key={genre}>{genre}</ul>
+            <ul onClick={this.props.button} className="btn btn-outline-secondary rounded waves-effect" key={genre}>{genre}</ul>
           )}
         </div>
     )}
