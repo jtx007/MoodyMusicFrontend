@@ -29,6 +29,14 @@
   margin-top: 60px;
   font-family: 'Julius Sans One', sans-serif;
 }
+
+.cam-text {
+  margin-left: 20px;
+  margin-top: 60px;
+  font-family: 'Julius Sans One', sans-serif;
+  margin-left: 20px;
+}
+
 .Mood-bar {
   margin-top: 40px;
   margin-left: 40px;
@@ -70,4 +78,15 @@
   padding-left: 200px;
   padding-right: 200px;
   border-radius: 5px
+}
+
+.webcam-capture {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.cam-btn {
+align: right
 }

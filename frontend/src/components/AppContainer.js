@@ -4,6 +4,8 @@ import NavBar from './NavBar'
 import Mood from "./Mood"
 import Genre from './Genre'
 import PlayerConsole from './PlayerConsole'
+import WebcamCapture from './WebcamCapture'
+
 
 class AppContainer extends React.Component {
 
@@ -48,6 +50,19 @@ class AppContainer extends React.Component {
     })
   }
 
+  handleImage = (event) => {
+    let selfie = this.capture
+    fetch('https://api-face.sightcorp.com/api/detect/fb6027a3e3d4439794f9bd52abb77f30', {
+      "method": "POST",
+      "body": JSON.stringify({img: selfie}),
+      "headers": {
+        "Accept": 'application/json',
+        "Content-Type": 'application/json'
+      }
+    }).then(resp => resp.json())
+    .then(console.log)
+  }
+
   render () {
     console.log(this.state.current_playlist)
     return (
@@ -64,6 +79,10 @@ class AppContainer extends React.Component {
 
         <div className="genre-bar">
           <Genre button={this.handleButton2}/>
+        </div>
+
+        <div className="webcam-capture">
+          <WebcamCapture image={this.capture}/>
         </div>
 
         <div className="player-console">

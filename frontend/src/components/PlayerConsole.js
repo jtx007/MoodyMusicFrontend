@@ -17,7 +17,7 @@ class PlayerConsole extends Component {
         <div className="console-title">
           <h3 className="app-text">This Playlist will tune your mood...</h3>
         </div>
-        <div className="PlayerConsole">
+        <div className="PlayerConsole btn-outline-secondary rounded">
           <SpotifyPlayer
 
             uri={"spotify:user:spotify:playlist:" + this.props.playlist}
