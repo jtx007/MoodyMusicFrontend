@@ -6,7 +6,45 @@ import Genre from './Genre'
 import PlayerConsole from './PlayerConsole'
 
 class AppContainer extends React.Component {
+
+  state = {
+    current_playlist: ''
+  }
+
+  handleButton = (event) => {
+    let term = event.target.innerHTML.split(' ')[1]
+    console.log(term);
+    fetch('http://localhost:3000/api/v1/terms', {
+      "method": "POST",
+      "body": JSON.stringify({word: term}),
+      "headers": {
+        "Accept": 'application/json',
+        "Content-Type": 'application/json'
+      }
+    }).then(resp => resp.json())
+    .then(json => {
+      this.setState({
+        current_playlist: json.data
+      })
+    })
+
+
+  }
+
+  handleButton2 = (event) => {
+    let term = event.target.innerHTML
+    fetch('http://localhost:3000/api/v1/terms', {
+      "method": "POST",
+      "body": JSON.stringify({word: term}),
+      "headers": {
+        "Accept": 'application/json',
+        "Content-Type": 'application/json'
+      }
+    })
+  }
+
   render () {
+    console.log(this.state)
     return (
       <div className="wrapper">
 
@@ -16,11 +54,11 @@ class AppContainer extends React.Component {
         </div>
 
         <div className="Mood-bar">
-          <Mood />
+          <Mood button={this.handleButton}/>
         </div>
 
         <div className="genre-bar">
-          <Genre />
+          <Genre button={this.handleButton2}/>
         </div>
 
         <div className="player-console">

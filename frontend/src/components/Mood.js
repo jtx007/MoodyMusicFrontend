@@ -10,7 +10,7 @@ class Mood extends Component {
         </div>
         <div className="Mood">
           {MoodTypes.map(mood =>
-            <button className="btn btn-outline-secondary rounded waves-effect" key={mood}>{mood}</button>
+            <button onClick={this.props.button} className="btn btn-outline-secondary rounded waves-effect" key={mood}>{mood}</button>
           )}
         </div>
       </div>
