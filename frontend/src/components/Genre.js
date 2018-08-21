@@ -33,7 +33,7 @@ class Genre extends Component {
               <button url="#" onClick={this.handleClick} className="genres-btn btn btn-rounded btn-mdb-color btn-lg">Extended Genres</button>
             </div>
             {GenresTypesBasic.map(genre =>
-              <ul onClick={this.handleClick} className="btn btn-outline-secondary rounded waves-effect" key={genre}>{genre}</ul>
+              <ul onClick={this.props.button} className="btn btn-outline-secondary rounded waves-effect" key={genre}>{genre}</ul>
             )}
           </div>
         </div>
