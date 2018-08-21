@@ -2,7 +2,9 @@ import React from 'react'
 
 class LoginForm extends React.Component {
   state = {
-    showModal: false
+    showModal: false,
+    username: 'username',
+    password: ''
   }
 
   handleClick = e => {
@@ -11,10 +13,23 @@ class LoginForm extends React.Component {
     })
   }
 
+  handleUsername = e => {
+    this.setState({
+      username: e.target.value
+    })
+  }
+
+  handlePassword = e => {
+    this.setState({
+      password: e.target.value
+    })
+  }
+
+
   displayModal = () => {
     if (this.state.showModal) {
       return (
-      <div className="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style={{opacity: 1, display: 'block'}}>
+      <div className="modal fade" id="modalLoginForm" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style={{opacity: 1, display: 'block'}}>
         <div></div>
         <div className="modal-dialog" role="document">
             <div className="modal-content">
@@ -27,14 +42,12 @@ class LoginForm extends React.Component {
                 <div className="modal-body mx-3">
                     <div className="md-form mb-5">
                         <i className="fa fa-envelope prefix grey-text"></i>
-                        <input type="email" id="defaultForm-email" className="form-control validate" />
-                        <label data-error="wrong" data-success="right" for="defaultForm-email">Your email</label>
+                        <input placeholder="username" onChange={this.handleUsername} type="email"  value={this.state.username} id="defaultForm-email" className="form-control validate" />
                     </div>
 
                     <div className="md-form mb-4">
                         <i className="fa fa-lock prefix grey-text"></i>
-                        <input type="password" id="defaultForm-pass" className="form-control validate" />
-                        <label data-error="wrong" data-success="right" for="defaultForm-pass">Your password</label>
+                        <input placeholder="password" onChange={this.handlePassword} value={this.state.password} type="password" id="defaultForm-pass" className="form-control validate" />
                     </div>
 
                 </div>

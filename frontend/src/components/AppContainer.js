@@ -10,15 +10,61 @@ import WebcamCapture from './WebcamCapture'
 class AppContainer extends React.Component {
 
   state = {
-    current_playlist: '37i9dQZF1DXcBWIGoYBM5M'
+    current_playlist: '37i9dQZF1DXcBWIGoYBM5M',
+    username: '',
+    password: '',
+    loggedIn: false,
+    showModal: false
+
+  }
+
+
+  handleClick = e => {
+    this.setState(prevState => {
+        return {showModal: !prevState.showModal}
+    })
+  }
+
+  handleUsername = e => {
+    this.setState({
+      username: e.target.value
+    })
+  }
+
+  handleSignUp = e => {
+    let username = this.state.username
+    fetch('http://localhost:3000/api/v1/users', {
+      "method": "POST",
+      "body": JSON.stringify({username: username}),
+      "headers": {
+        "Accept": 'application/json',
+        "Content-Type": 'application/json'
+      }
+    }).then(r => r.json())
+    .then(json => {
+      this.setState(prevState => {
+          return {showModal: !prevState.showModal,
+          loggedIn: !prevState.loggedIn}
+      })
+    })
+  }
+
+  handleLogout = e => {
+    this.setState({
+      showModal: false,
+      username: '',
+      password: '',
+      loggedIn: false
+    })
   }
 
   handleButton = (event) => {
     let term = event.target.innerHTML.split(' ')[1]
+    let user = this.state.username
     console.log(term);
     fetch('http://localhost:3000/api/v1/terms', {
       "method": "POST",
-      "body": JSON.stringify({word: term}),
+      "body": JSON.stringify({word: term, user: user}),
       "headers": {
         "Accept": 'application/json',
         "Content-Type": 'application/json'
@@ -70,7 +116,7 @@ class AppContainer extends React.Component {
 
         <div className="logo-container">
           <LogoContainer />
-          <NavBar />
+          <NavBar loggedIn={this.state.loggedIn} user={this.state.username} modalShow={this.state.showModal} username={this.handleUsername} modal={this.handleClick} signup={this.handleSignUp} logout={this.handleLogout}/>
         </div>
 
         <div className="Mood-bar">
