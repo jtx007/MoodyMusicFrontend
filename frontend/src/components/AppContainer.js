@@ -24,7 +24,7 @@ class AppContainer extends React.Component {
     }).then(resp => resp.json())
     .then(json => {
       this.setState({
-        current_playlist: json.data
+        current_playlist: json.data.attributes.player
       })
     })
 
@@ -40,11 +40,16 @@ class AppContainer extends React.Component {
         "Accept": 'application/json',
         "Content-Type": 'application/json'
       }
+    }).then(resp => resp.json())
+    .then(json => {
+      this.setState({
+        current_playlist: json.data.attributes.player
+      })
     })
   }
 
   render () {
-    console.log(this.state)
+    console.log(this.state.current_playlist)
     return (
       <div className="wrapper">
 
@@ -62,7 +67,7 @@ class AppContainer extends React.Component {
         </div>
 
         <div className="player-console">
-          <PlayerConsole />
+          <PlayerConsole playlist={this.state.current_playlist}/>
         </div>
 
       </div>

@@ -11,8 +11,7 @@ class PlayerConsole extends Component {
       height: 450,
     };
     const view = 'coverart'; // or 'coverart'
-    const theme = 'white'; // or 'white'
-
+    const theme = 'black'; // or 'white'
     return (
       <div>
         <div className="console-title">
@@ -21,7 +20,7 @@ class PlayerConsole extends Component {
         <div className="PlayerConsole">
           <SpotifyPlayer
 
-            uri="spotify:user:spotify:playlist:4WCmHOBqKS7pac4s1lW2ZY"
+            uri={"spotify:user:spotify:playlist:" + this.props.playlist}
             size={size}
             view={view}
             theme={theme}
