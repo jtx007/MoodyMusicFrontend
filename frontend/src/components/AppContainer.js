@@ -128,7 +128,7 @@ class AppContainer extends React.Component {
         </div>
 
         <div className="webcam-capture">
-          <WebcamCapture image={this.capture}/>
+          <WebcamCapture handleImage={this.handleImage} image={this.capture}/>
         </div>
 
         <div className="player-console">

@@ -20,6 +20,7 @@ class WebcamCapture extends React.Component {
   };
 
   render() {
+    console.log(this.props);
     const videoConstraints = {
       width: 1280,
       height: 720,
@@ -38,6 +39,7 @@ class WebcamCapture extends React.Component {
           videoConstraints={videoConstraints}
           className="btn-outline-secondary rounded"
         />
+
         <button className="cam-btn btn-outline-secondary rounded btn-lg" onClick={this.capture}>Capture photo</button>
         <div>
           <img id="selfie" src={this.state.currentPicture} alt="Selfie" height="800" aria-hidden="true" />
