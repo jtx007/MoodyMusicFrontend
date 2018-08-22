@@ -9,13 +9,21 @@ import WebcamCapture from './WebcamCapture'
 
 class AppContainer extends React.Component {
 
+
   state = {
     current_playlist: '37i9dQZF1DXcBWIGoYBM5M',
     username: '',
     password: '',
     loggedIn: false,
-    showModal: false
+    showModal: false,
+    showWebcam: false
 
+  }
+
+  showWebcam = e => {
+    this.setState(prevState => {
+      return {showWebcam: !prevState.showWebcam}
+    })
   }
 
 
@@ -109,6 +117,10 @@ class AppContainer extends React.Component {
     .then(console.log)
   }
 
+  handleUserPlaylists = (event) => {
+    fetch('http://localhost:3000/api/v1/playlists')
+  }
+
   render () {
     console.log(this.state.current_playlist)
     return (
@@ -126,11 +138,11 @@ class AppContainer extends React.Component {
         <div className="genre-bar">
           <Genre button={this.handleButton2}/>
         </div>
-
+          <br />
         <div className="webcam-capture">
-          <WebcamCapture handleImage={this.handleImage} image={this.capture}/>
+          <WebcamCapture webcamStatus={this.state.showWebcam} showWebcam={this.showWebcam} handleImage={this.handleImage} image={this.capture}/>
         </div>
-
+          <br />
         <div className="player-console">
           <PlayerConsole playlist={this.state.current_playlist}/>
         </div>
