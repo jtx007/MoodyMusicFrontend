@@ -104,21 +104,19 @@ class AppContainer extends React.Component {
     })
   }
 
-  handleImage = (event) => {
-    let selfie = this.capture
-    fetch('https://api-face.sightcorp.com/api/detect/fb6027a3e3d4439794f9bd52abb77f30', {
-      "method": "POST",
-      "body": JSON.stringify({img: selfie}),
-      "headers": {
-        "Accept": 'application/json',
-        "Content-Type": 'application/json'
-      }
-    }).then(resp => resp.json())
-    .then(console.log)
-  }
+  handleImage = (selfie) => {
+    var formData  = new FormData();
 
-  handleUserPlaylists = (event) => {
-    fetch('http://localhost:3000/api/v1/playlists')
+    formData.append('img', selfie)
+    formData.append('app_key', 'fb6027a3e3d4439794f9bd52abb77f30')
+    // let selfie = this.capture
+    // cannot find capture because is stored in the child
+    // debugger
+    fetch('https://eastus.api.cognitive.microsoft.com/face/v1.0/detect[?returnFaceId][&returnFaceLandmarks][&returnFaceAttributes]', {
+      "method": "POST",
+      "body": formData, //app_key: 'fb6027a3e3d4439794f9bd52abb77f30'}),
+    }).then(resp => resp.json())
+      .then(console.log)
   }
 
   render () {
