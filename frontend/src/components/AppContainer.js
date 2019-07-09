@@ -6,7 +6,6 @@ import Genre from './Genre'
 import PlayerConsole from './PlayerConsole'
 import WebcamCapture from './WebcamCapture'
 
-
 class AppContainer extends React.Component {
 
 
